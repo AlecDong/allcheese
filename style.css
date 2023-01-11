@@ -1,0 +1,425 @@
+* {
+    -webkit-text-size-adjust: auto;
+    box-sizing: auto;
+}
+
+body, html{
+    height: 100%;
+    margin: 0;
+    font-family: Cheese, Arial, Helvetica, sans-serif;
+}
+
+body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: url(cheese.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header {
+    background-color: rgb(255, 230, 0);
+    overflow: auto;
+    color: rgb(0, 0, 0);
+    font-family: Cheese, Arial, Helvetica, sans-serif;
+    margin: 0;
+    width: auto;
+    padding: 2px;
+}
+
+#footer {
+    background-color: rgb(255, 230, 0);
+    color: rgb(0, 0, 0);
+    font-family: Cheese, Arial, Helvetica, sans-serif;
+    padding: 2px;
+}
+
+.tablink {
+    background-color: rgb(255, 255, 0);
+    color: black;
+    float: left;
+    border: none;
+    cursor: pointer;
+    font-family: Cheese, Arial, Helvetica, sans-serif;
+    padding: 10px 0px;
+    font-size: 15px;
+    width: 25%;
+    transition-duration: 0.3s;
+}
+
+.tablink:hover {
+    background-color: rgb(255, 230, 0);
+}
+
+button {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+@font-face {
+    font-family: Cheese;
+    src: url(LemonMilkRegular-X3XE2.otf);
+}
+
+.tabContent {
+    color: rgb(0, 0, 0);
+    display: none;
+    padding: 100px 30px 50px 30px;
+    min-height: 100%;
+    height: auto;
+}
+
+.innerTabContent {
+    background-color: rgb(255, 230, 0);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background-color: rgb(255, 241, 118);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px !important;
+  margin-bottom: 16px !important;
+  resize: vertical;
+}
+
+input[type=search] {
+  background-color: rgb(255, 241, 118);
+}
+
+button[type=submit] {
+  background-color: rgb(255, 241, 118);
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: rgb(255, 248, 188);
+}
+
+#cheeseType:link {
+    color: rgb(144, 106, 0);
+    text-decoration: none;
+}
+
+#cheeseType:visited {
+    color: rgb(144, 106, 0);
+    text-decoration: none;
+}
+
+#cheeseType:hover {
+    color: rgba(144, 106, 0, 0.616);
+    text-decoration: dotted;
+}
+
+.cheeses {
+    text-align: center;
+    background-color: rgb(255, 196, 0);
+    padding: 20px;
+    padding-top: 0;
+    margin: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.cheeses h2 {
+    padding-top: 20px;
+    font-size: calc(16px + (40 - 16) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: bold;
+}
+
+a, p {
+    font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(2em + (8 - 2) * ((100vw - 300px)/(1600 - 300)));
+}
+
+#recipes {
+    text-align: center;
+    padding-top: 1rem;
+    font-weight: bold;
+}
+
+.cheeses p {
+    text-align: left;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#detail {
+    max-width: 30vw;
+    max-height: 20vw;
+    vertical-align: middle;
+}
+
+#ingredients {
+    padding-top: 1rem;
+    float: left;
+    width: 30%;
+}
+
+#directions {
+    float: left;
+    padding-top: 1rem;
+    width: 70%;
+}
+
+#row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(255, 196, 0); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 123, 0);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 243, 135); 
+}
+
+#logo {
+    max-width: 90px;
+    max-height: 90px;
+    margin: 1%;
+    padding-left: 1%;
+    float: left;
+    vertical-align: middle;
+}
+
+#title {
+    vertical-align: middle;
+    float: right;
+    padding: 2%;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+.collapsible {
+    background-color: rgb(255, 196, 0);
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition-duration: 0.3s;
+}
+  
+.activeCheese, .collapsible:hover {
+    background-color: rgb(255, 123, 0);
+}
+  
+.content {
+    padding: 0 18px;
+    overflow: hidden;
+    background-color: rgb(255, 243, 135);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+.collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.activeCheese:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: rgb(255, 123, 0) !important;
+}
+
+td {
+    background-color: rgb(255, 196, 0);
+    padding: 10px !important;
+    border: none !important;
+}
+
+thead {
+    background-color: rgb(255, 123, 0);
+}
+
+th {
+    border: none !important;
+}
+
+.page-link:hover {
+    background-color: rgb(255, 123, 0) !important;
+}
+
+h1 {
+    font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1600 - 300)));
+    vertical-align: middle;
+    margin-bottom: 1%;
+}
+
+h2 {
+    font-size: calc(16px + (22 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+
+th {
+    padding: 10px !important;
+}
+
+#topspan {
+    width: inherit;
+    display: inline-block;
+    font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
+}
+
+#totop {
+    border: 5px solid rgb(255, 230, 0);
+    background-color: rgb(255, 196, 0);
+    border-radius: 50%;
+    text-align: center;
+    display : flex;
+    align-items : center;
+    font-weight: bold;
+    position: relative;
+    margin-left: auto;
+    margin-right: 50px;
+    cursor: pointer;
+    top: -4.5vw;
+    height: 8vw;
+    width: 8vw;
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer h1 {
+    position: absolute;
+    margin: 0 !important;
+}
+
+#step {
+    border: 5px solid rgb(255, 196, 0);
+    background-color: rgb(255, 230, 0);
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items : center;
+    font-weight: bold;
+    position: relative;
+    margin-left: 50px;
+    margin-right: auto;
+    top: -2vw;
+    height: 5vw;
+    width: 5vw;
+}
+
+#step p {
+    font-family: Cheese, Arial, Helvetica, sans-serif;
+    width: inherit;
+    margin-bottom: 0 !important;
+    text-align: center;
+    font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
+}
+
+#dtBasicExample_wrapper select {
+    background-color: rgb(255, 241, 118);
+}
+
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #totop {
+        top: -4vh;
+        height: 8vh;
+        width: 8vh;
+        margin-right: 5%;
+        margin-bottom: 10%;
+    }
+
+    #step {
+        top: -4vh;
+        margin: auto;
+        height: 8vh;
+        width: 8vh;
+    }
+
+    .cheeses p {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    #title {
+        display: block;
+        font-size: large;
+        float: none;
+        margin: 1%;
+        padding: 0;
+    }
+
+    .innerTabContent > h1 {
+        font-size: medium;
+        font-weight: bold;
+    }
+
+    #logo {
+        display: block;
+        float: none;
+        margin: auto;
+    }
+
+    #footer h1 {
+        font-size: large;
+    }
+}
